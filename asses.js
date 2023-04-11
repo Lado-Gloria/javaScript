@@ -1,5 +1,6 @@
-// let food ="eating"
-// console.log(food.reve)
+let food ="eating"
+let food2 = food.split("").reverse
+console.log(food2)
 
 // Write a function that takes in the following array and consoles the target if it is found else
 // null
@@ -9,30 +10,30 @@
 function number(arr,target){
     
         let leftIndex =0;
-         let rightindex= arr.length-1;
+        let rightIndex =arr.length-1;
     
  
-}
-while(leftIndex<=rightindex){
+
+while(leftIndex<=rightIndex){
         
-        let middle = Math.floor((leftIndex+rightindex)/2);
+        let middle = Math.floor((leftIndex+rightIndex)/2);
         if(arr[middle] === target){
             return middle;
 
         
         }
-        else if(arr[middle>target]){
-            leftIndex =middle -1
+        else if(arr[middle<target]){
+            leftIndex =middle +1
 
 
         }
         else{
-            return null
+            rightIndex =middle -1
         }
-       
+       return null
     
     }
-
+}
 let num= [2,8,0,23,5,45,76];
  let target = 23;
 console.log((num,target));
@@ -56,7 +57,9 @@ else{
 // 5
 function data(array){
    let array=[12,87,45,75,23,64,74]
-   for(x in array)
+   for(x in array )
+ array=x*4
+   console.log(array*4)
 }
 
 
